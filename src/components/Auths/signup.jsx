@@ -79,7 +79,7 @@ const SignupForm = () => {
             <button
               type="submit"
               onClick={createUserAccount}
-              className="bg-black text-white p-3 rounded-md"
+              className="bg-primary text-white p-3 rounded-md"
             >
               {isLoading ? (
                 <div className="flex gap-3 justify-center items-center">
