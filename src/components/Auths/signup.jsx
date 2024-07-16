@@ -18,7 +18,7 @@ const SignupForm = () => {
   return (
     <>
       <AuthNavbar />
-      <div className="flex flex-col gap-5 my-12 mx-3 md:w-[20rem] text-center justify-center items-center">
+      <div className="flex flex-col gap-5 my-12 mx-3 md:mx-[10rem] lg:mx-[18em] text-center justify-center items-center">
         <h2 className="text-[30px] text-black font-bold pt-5 sm:pt-12">
           Create a new account
         </h2>

@@ -16,7 +16,7 @@ function Navbar() {
             <div className="flex flex-row h-20 justify-between items-center">
               {/* Logo */}
               <div className="flex lg:ml-0">
-                <Link to={"/home"} className="flex">
+                <Link to={"/"} className="flex">
                   <img src="/assets/logo.svg" className="flex " />
                 </Link>
               </div>

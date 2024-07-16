@@ -7,7 +7,7 @@ function SecondNavbar() {
       <nav className="flex items-center">
         <ul className="flex flex-1 items-center justify-end space-x-6">
           <Link
-            to={"/home"}
+            to={"/"}
             className="text-base font-medium text-gray-900 hover:text-gray-700"
           >
             Home
