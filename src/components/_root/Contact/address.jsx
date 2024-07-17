@@ -71,7 +71,7 @@ export default function Address() {
               </div>
             </div>
           </div>
-          <img className="w-[400px] h-[300px] rounded-md" src={Addr} alt="Office" />
+          <img className="w-full md:w-[400px] h-[300px] rounded-md" src={Addr} alt="Office" />
         </div>
       </div>
       <img className="w-full h-[350px] my-14 rounded-md" src={Map} alt="Office" />
