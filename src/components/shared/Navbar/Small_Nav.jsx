@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function SecondNavbar() {
   return (
-    <header className="flex pt-4 pb-4 px-2 sm:px-6 lg:px-8 border-b items-center justify-center">
+    <header className="flex pt-4 pb-4 px-2 sm:px-6 lg:px-8 border-b items-center justify-start">
       <nav className="flex items-start">
         <ul className="flex flex-row text-left justify-end space-x-6">
           <Link
@@ -26,10 +26,6 @@ function SecondNavbar() {
           </Link>
         </ul>
       </nav>
-
-      <select className="ml-auto md:flex hidden border-l pl-3 text-[20px] outline-none items-center justify-center">
-        <option>Recently Viewed</option>
-      </select>
     </header>
   );
 }

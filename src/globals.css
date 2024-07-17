@@ -43,4 +43,24 @@ a {
   background: #eeb88184;
 }
 
+.heroSec{
+  background: url('./assets/heros_bg/home_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.diamond{
+  background: url('./assets/images/RectangleRingImgOne.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.carbon{
+  background: url('./assets/images/RectangleRingImg2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
 /**/

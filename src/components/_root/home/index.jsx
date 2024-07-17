@@ -11,7 +11,7 @@ import Footer from "../../shared/Footer/index";
 
  const Home = () => {
   return (
-    <div>
+    <div className="w-full">
       <Navbar />
       <Hero />
       <Section_One />
