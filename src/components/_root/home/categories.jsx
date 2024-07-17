@@ -11,7 +11,7 @@ function Categories() {
         />
       </div>
 
-      <div className="flex grid grid-cols-2 lg:grid-cols-4 gap-4 mx-3 gap-3 items-center justify-center">
+      <div className="flex grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 mx-3 gap-3 items-center justify-center">
         <div className="flex flex-col gap-3 items-start justify-start">
           <img
             className="w-[120px] h-[115px] p-3 bg-white rounded-full relative"
