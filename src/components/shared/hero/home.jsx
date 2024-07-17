@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <div>
       <img className="w-full h-[30rem] -z-20 top-0 bottom-0" src={hero} />
-      <section className="flex absolute top-[8rem] md:top-[14rem] bottom-0 mx-5 md:mx-12 md:flex-row flex-col items-center justify-center">
+      <section className="flex absolute top-[4rem] md:top-[14rem] bottom-0 mx-5 md:mx-12 md:flex-row flex-col items-center justify-center">
         <div className="mx-auto md:text-left text-center">
           <h1 className="md:text-5xl text-4xl text-black font-bold">
             Diamond Jewelry <br />

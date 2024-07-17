@@ -16,7 +16,7 @@ function Social() {
           <br />
         </div>
 
-        <div className="flex items-center rounded-md">
+        <div className="flex w-full items-center rounded-md">
           <input
             className="text-black w-full p-3 border lg:w-[15em] outline-primary rounded-l-md"
             placeholder="Email address"
