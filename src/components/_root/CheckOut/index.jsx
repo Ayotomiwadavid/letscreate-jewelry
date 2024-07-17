@@ -8,8 +8,8 @@ import ShippingDetails from './FormField'
 export default function CheckOutPage() {
   return (
     <div>
-      <Navbar />
-      <Cart_Hero />
+      <Navbar/>
+      <Cart_Hero title="CheckOut" />
       <ShippingDetails />
       <Footer />
     </div>

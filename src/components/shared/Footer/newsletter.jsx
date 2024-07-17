@@ -3,8 +3,8 @@ import React from "react";
 
 function Social() {
   return (
-    <div className="flex bg-[#303741] items-center justify-center">
-      <div className="flex flex-col gap-3 ml-12 py-4 items-start justify-center">
+    <div className="flex flex-col md:flex-row px-3 py-8 md:py-0 md:pl-12 bg-[#303741] items-center justify-center">
+      <div className="flex flex-col gap-3 items-start justify-center">
         <div className="text-primary text-[15px] font-bold font-['Cormorant']">
           $20 discount for your first order
         </div>
@@ -26,7 +26,7 @@ function Social() {
         </button>
         </div>
       </div>
-      <img className="w-[80vw] h-[70vh]" src="/assets/imgs/newletters.png" />
+      <img className="w-[80vw] h-[70vh] md:block hidden" src="/assets/imgs/newletters.png" />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Map from "../../../assets/images/map.png";
 export default function Address() {
   return (
     <>
-      <div className="relative mx-12">
+      <div className="relative mx-3 md:mx-12">
         <div className="text-center mt-12">
           <div className="text-black text-[30px] font-bold font-['Cormorant Garamond']">
             We are always eager to hear from you!
@@ -17,7 +17,7 @@ export default function Address() {
           </div>
         </div>
 
-        <div className="flex flex-row relative mx-auto gap-12 mt-12 justify-center">
+        <div className="flex flex-col-reverse md:flex-row relative mx-auto gap-12 mt-12 justify-center">
           <div className="flex flex-col gap-8">
             <div className="flex flex-row gap-3">
               <img

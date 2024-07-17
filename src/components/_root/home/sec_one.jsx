@@ -2,7 +2,7 @@ import React from "react";
 
 function Section_One() {
   return (
-    <section className="flex py-[5em] md:py-[2em] mx-5 md:mx-12 md:flex-row flex-col gap-5 items-start justify-center">
+    <section className="flex py-[2em] md:py-[2em] mx-5 md:mx-12 md:flex-row flex-col gap-5 items-start justify-center">
       <div className="flex flex-row gap-3 items-center justify-center">
         <img
           className="w-[60px] h-[60px] relative"

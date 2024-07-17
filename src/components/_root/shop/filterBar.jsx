@@ -6,7 +6,7 @@ const FilterBar = ({
   handleSearch,
 }) => {
   return (
-    <div className="flex justify-between items-center bg-gray-400 p-4 mb-4">
+    <div className="flex flex-col md:flex-row justify-between items-center bg-gray-400 p-4 mb-4">
       {/* Items per page */}
 
       {/* Search bar */}
@@ -43,32 +43,35 @@ const FilterBar = ({
       </div>
 
       {/* Sort by */}
-      <div className="flex items-center gap-4">
-        <div>
+      <div className="flex flex-row items-center justify-between gap-[6em]">
+        <div className="flex flex-col md:flex-row items-start justify-start gap-3">
           <label htmlFor="itemsPerPage">Show</label>
           <select
             name="itemsPerPage"
             id="itemsPerPage"
             onChange={(e) => handleItemsPerPageChange(e.target.value)}
-            className="ml-2 px-2 py-2.5 border border-gray-300 rounded-md"
+            className="px-2 py-2.5 border border-gray-300 rounded-md"
           >
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="20">20</option>
           </select>
         </div>
-        <label htmlFor="sort">Sort by</label>
-        <select
-          name="sort"
-          id="sort"
-          onChange={(e) => handleSortChange(e.target.value)}
-          className="ml-2 px-2 py-2.5 border border-gray-200 rounded-md"
-        >
-          <option value="price-asc">Default</option>
-          <option value="price-desc">Price: High to Low</option>
-          <option value="date-asc">Date: Old to New</option>
-          <option value="date-desc">Date: New to Old</option>
-        </select>
+
+        <div className="flex flex-col md:flex-row items-start justify-start gap-3">
+          <label htmlFor="sort">Sort by</label>
+          <select
+            name="sort"
+            id="sort"
+            onChange={(e) => handleSortChange(e.target.value)}
+            className="px-2 py-2.5 border border-gray-200 rounded-md"
+          >
+            <option value="price-asc">Default</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="date-asc">Date: Old to New</option>
+            <option value="date-desc">Date: New to Old</option>
+          </select>
+        </div>
       </div>
     </div>
   );

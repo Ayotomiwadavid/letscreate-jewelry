@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MessageBox() {
   return (
-    <div className="flex flex-col text-center relative mx-12 mb-16 justify-center items-center">
+    <div className="flex flex-col text-center relative mx-3 md:mx-12 mb-16 justify-center items-center">
       <div className="relative mb-8 justify-center items-center">
         <div className="text-black text-3xl font-normal font-['Cormorant']">
           Contact us
@@ -12,7 +12,7 @@ export default function MessageBox() {
         </div>
 
         <div className="flex flex-col mt-6 gap-10">
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <input
               className="text-black/opacity-40 bg-stone-50 p-3 rounded-md font-normal font-['Lato']"
               placeholder="Your Name"

@@ -21,8 +21,8 @@ function Navbar() {
                 </Link>
               </div>
 
-              <nav className="ml-auto flex gap-4 items-center justify-center">
-                <button className="font-bold bg-primary text-white hover:bg-white hover:text-primary py-3 text-center w-full lg:w-[15em] rounded-md">
+              <nav className="ml-auto md:flex hidden gap-4 items-center justify-center">
+                <button className="font-bold bg-primary lg:block hidden text-white hover:bg-white hover:text-primary py-3 text-center w-full lg:w-[15em] rounded-md">
                   Browse Categories
                 </button>
 

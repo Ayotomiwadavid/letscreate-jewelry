@@ -22,7 +22,7 @@ export default function FormField() {
   };
 
   return (
-    <main className="grid md:grid-cols-2 max-w-[26cm] gap-x-3 justify-center mx-auto my-[2cm] grid-cols-2 bg-white">
+    <main className="flex flex-col md:flex-row gap-x-3 justify-center mx-auto my-[2cm] grid-cols-2 bg-white">
       <section className="px-5">
         <h1 className="text-3xl font-bold mb-5">Billing details</h1>
         <div className="grid gap-6 mb-6 md:grid-cols-2">

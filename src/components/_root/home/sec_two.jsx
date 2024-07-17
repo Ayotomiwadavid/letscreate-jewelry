@@ -2,7 +2,7 @@ import React from "react";
 
 function Section_Two() {
   return (
-    <section className="flex py-[5em] md:py-[2em] mx-5 md:mx-24 md:flex-row flex-col gap-8 items-start justify-between">
+    <section className="flex py-[1em] md:py-[2em] mx-5 md:mx-24 md:flex-row flex-col gap-8 items-start justify-between">
       <div className="flex flex-row w-full bg-[#eeb88184] rounded-md items-start justify-center">
         <span className="w-full font-bold p-5">Ring in Yellow Goldwith Diamonds</span>
         <img

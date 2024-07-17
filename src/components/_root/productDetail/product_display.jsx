@@ -30,7 +30,7 @@ export default function ProductDisplay() {
 
   return (
     <div>
-      <section className="product-display">
+      <section className="product-display p-5">
         {product ? (
           <div className="grid grid-cols-1 md:grid-cols-2 md:m-10 md:mx-28">
             <div className="col ">
@@ -41,7 +41,7 @@ export default function ProductDisplay() {
 
             <div className="col">
               <div className="content">
-                <h1 className="text-4xl uppercase pb-4">{product.title}</h1>
+                <h1 className="text-3xl uppercase pb-4">{product.title}</h1>
                 <p className="price text-gray-500 text-2xl">${product.price}</p>
                 <br />
                 <p className="price text-gray-500 text-lg pb-8">

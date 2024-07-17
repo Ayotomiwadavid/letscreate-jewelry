@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import Social from "./Social_";
+import Social from "./newsletter";
 
 function Footer() {
   return (
     <>
     <Social />
       <div className="bg-gray-100">
-        <div className="flex flex-row px-12 py-4 border-b border-primary items-start justify-between">
+        <div className="flex flex-col md:flex-row px-3 md:px-12 py-4 border-b border-primary items-start justify-between">
           <div>
             <span className="text-black text-xl font-bold font-['Lato']">
               Hours
@@ -23,7 +23,7 @@ function Footer() {
         </div>
 
         <footer className="text-gray-600 body-font">
-          <div className="container px-12 p-12 mx-auto">
+          <div className="px-3 md:px-12 py-12 gap-5 mx-auto">
             <div className="flex flex-row mb-6 justify-between items-center">
               <div className="flex flex-col lg:ml-0">
                 <span className="text-black text-[15px] font-normal font-['Lato']">
@@ -35,7 +35,7 @@ function Footer() {
               </div>
 
               {/* Logo */}
-              <div className="flex ml-auto">
+              <div className="md:flex hidden ml-auto">
                 <Link to={"/home"} className="flex">
                   <img src="/assets/logo.svg" className="flex " />
                 </Link>
@@ -57,7 +57,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="flex flex-row items-center justify-between">
+            <div className="flex flex-col md:flex-row gap-4 items-start md:items-center md:justify-between">
               <div className="flex flex-col gap-2 w-[300px]">
                 <span className="text-black text-xl font-bold font-['Cormorant']">
                   Contact Us

@@ -43,7 +43,7 @@ export default function Cart() {
 
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[6em] bg-blue w-full items-start justify-between p-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[6em] bg-blue w-full items-start justify-between px-3 md:px-12 py-12">
       <div className="w-full h-[30em] overflow-y-auto">
         <div className="flex w-full justify-between space-x-6 py-4 px-4 bg-[#FFF9E5] rounded-md">
           <div>Product</div>

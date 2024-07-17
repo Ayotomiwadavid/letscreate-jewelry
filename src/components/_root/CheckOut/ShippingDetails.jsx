@@ -60,7 +60,7 @@ export default function Grid({
             <input type="radio" className="bg-gray-50" />
             <p className="text-sm">Direct Bank Transfer</p>
           </div>
-          <p className="text-sm font-normal w-[12cm] text-[#9ca3af]">
+          <p className="text-sm md:w-[24rem] font-normal text-[#9ca3af]">
             Make your payment directly into our bank account. Please use your
             Order ID as the payment reference. Your order will not be shipped
             until the funds have cleared in our account.
@@ -78,7 +78,7 @@ export default function Grid({
           </div>
         </section>
 
-        <p className="text-sm font-normal w-[12cm] text-[#9ca3af]">
+        <p className="text-sm md:w-[24rem] font-normal text-[#9ca3af]">
           Your personal data will be used to support your experience throughout
           this website, to manage access to your account, and for other purposes
           described in our{" "}
@@ -92,7 +92,7 @@ export default function Grid({
             onClick={createUserAccount}
           >
             <PaystackButton
-              className="py-4 max-w-[5cm] mx-[4cm] justify-center px-12 me-2 mb-2 text-sm font-normal focus:outline-none bg-white rounded-xl border hover:bg-[#fcd34d] hover:text-white"
+              className="py-4 mx-[3cm] px-12 me-2 mb-2 text-sm font-normal focus:outline-none bg-white rounded-xl border hover:bg-[#fcd34d] hover:text-white justify-center"
               {...componentProps}
             />
           </button>

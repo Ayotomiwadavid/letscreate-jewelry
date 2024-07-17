@@ -77,7 +77,7 @@ function Categories() {
         </div>
       </div>
 
-      <div className="w-full text-white/opacity-60 text-[83px] font-bold font-['Cormorant']">
+      <div className="w-full text-white/opacity-60 text-[43px] md:text-[83px] font-bold font-['Cormorant']">
         WE ARE HERE, FOR{" "} YOU
       </div>
     </section>

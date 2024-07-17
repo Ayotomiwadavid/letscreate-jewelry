@@ -17,7 +17,7 @@ export default function productCard({ product, sold }) {
         />
       </div>
       <div className="text-left">
-        <p className="text-gray-300 text-lg"><del>${product.price}</del> <span className="text-primary">${product.price - 12}</span></p>
+        <p className="text-gray-300 text-lg"><del>${product.price}</del> <span className="text-primary">${product.price - 1}</span></p>
         <h1 className="text-sm truncate font-semibold text-gray-800">
           {product.title}
         </h1>
