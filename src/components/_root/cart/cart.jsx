@@ -73,7 +73,8 @@ export default function Cart() {
           </div>
         ))}
       </div>
-      <div className="flex flex-col p-5 h-[20em] w-[22em] xl:w-[30em] items-center justify-start gap-3 bg-[#FFF9E5] rounded-md">
+
+      <div className="flex flex-col p-5 h-[20em] w-full md:w-[22em] xl:w-[30em] items-center justify-start gap-3 bg-[#FFF9E5] rounded-md">
         <div className="text-[25px] font-bold">Cart Totals</div>
         <div className="flex mt-6 items-center justify-between gap-x-[3em] xl:gap-x-[8em]">
           <div className="text-black font-bold">Subtotal</div>
