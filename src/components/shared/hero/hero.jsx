@@ -10,9 +10,9 @@ const Hero = ({title}) => {
           {title}
         </div>
         <div className="flex font-bold text-black items-center justify-start">
-          <Link to={"/home"}>Home</Link>{" "}
+          <Link to={"/"}>Home</Link>{" "}
           <ion-icon name="caret-forward-outline"></ion-icon>{" "}
-          <Link to={"/home"}>{title}</Link>
+          <Link to={"/"}>{title}</Link>
         </div>
       </section>
       <img className="w-[40vw] h-[230px] object-cover" alt="/" src={Cart_Hero} />
