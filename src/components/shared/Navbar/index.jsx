@@ -65,7 +65,7 @@ function Navbar() {
               </div>
             </div>
           </nav>
-          <aside className={visibility ? "w-[55%] mr-7 fixed right-0 py-5 px-3 h-fit flex flex-col items-center justify-center ga-5 bg-white rounded-md shadow-xl transition-all duration-500 md:w-[15%] md:mr-0" : "w-[55%] fixed right-[-50%] py-5 px-3 h-fit flex flex-col items-center justify-center ga-5 bg-white rounded-md shadow-xl transition-all duration-500 md:w-[15%]"}>
+          <aside className={visibility ? "w-[55%] mr-7 fixed right-0 py-5 px-3 h-fit flex flex-col items-center justify-center ga-5 bg-white rounded-md shadow-xl transition-all duration-500 md:w-[15%] md:mr-0" : "w-[55%] fixed right-[-100%] py-5 px-3 h-fit flex flex-col items-center justify-center ga-5 bg-white rounded-md shadow-xl transition-all duration-500 md:w-[15%]"}>
             <div className="flex flex-col items-center justify-center gap-3 py-3">
               <img src={profileImage} alt="Profile Icon" className="h-[70px] w-[70px] rounded-full my-1"/>
               <article className="w-full flex flex-col items-center justify-center">
