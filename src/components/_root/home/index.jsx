@@ -22,12 +22,12 @@ import Footer from "../../shared/Footer/index";
         </div>
         <DealOfTheDay />
       </div>
-      <div className="text-center mt-10 font-bold text-[30px]">
+      <NewArrival />
+      {/* <div className="text-center mt-10 font-bold text-[30px]">
         <div>Trending product</div>
         <TrendingProducts />
-      </div>
+      </div> */}
       <Categories />
-      <NewArrival />
       <Footer />
     </div>
   );

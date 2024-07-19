@@ -5,7 +5,7 @@ import Social from "./newsletter";
 function Footer() {
   return (
     <>
-    <Social />
+    {/* <Social /> */}
       <div className="bg-gray-100">
         <div className="flex flex-col md:flex-row px-3 md:px-12 py-4 border-b border-primary items-start justify-between">
           <div>

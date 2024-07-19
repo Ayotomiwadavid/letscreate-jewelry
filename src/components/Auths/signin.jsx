@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../shared/Footer";
 import AuthNavbar from "../shared/Navbar/authNav";
-// import { toast } from "react-toastify";
+import { signIn } from "../../Controller";
+import { toast } from "react-toastify";
+import { AuthStatus } from "../../Context/Usecontext";
 
 const SigninForm = () => {
   const navigate = useNavigate();
@@ -10,9 +12,30 @@ const SigninForm = () => {
   const [password, setPassword] = useState("");
   const [isLoading, setLoading] = useState(false);
 
-  // ============================== SIGN IN
+  //Context Import starts here
+  const authContext = useContext(AuthStatus);
+  const {setAuthStatusValue, setUser} = authContext;
 
-  const signInAccount = async () => {};
+  // HANDLE SIGN IN FUNCTION
+  const signInAccount = async () => {
+    setLoading(true)
+    try {
+
+      const userdata = await signIn(email, password, setLoading);
+      setAuthStatusValue(true);
+      setUser(userdata);
+
+      // Redirect to the home page after successful sign-in
+      navigate("/");
+      toast.success("Signed in successfully");
+
+    } catch (error) {
+      // Handle sign-in error
+      toast.error("Failed to sign in. " + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>

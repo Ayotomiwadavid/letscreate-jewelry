@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import { toast } from "react-toastify";
 import Footer from "../shared/Footer/index";
 import AuthNavbar from "../shared/Navbar/authNav";
+import { signUp } from "../../Controller";
+import { toast } from "react-toastify";
+import { AuthStatus } from "../../Context/Usecontext";
 
 const SignupForm = () => {
   const navigate = useNavigate();
@@ -11,9 +14,34 @@ const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setLoading] = useState(false);
+  const { setUser } = useContext(AuthStatus);
 
-  // ============================== SIGN UP
-  const createUserAccount = async () => {};
+  //DESTRUCTURE SETUSER OUT OF THE CONTEXT
+
+  // Hnadle SIGN UP
+  const createUserAccount = async () => {
+    setLoading(true);
+    try {
+      const data = await signUp(email, password, setLoading, name);
+
+      //SAVE USER DATA IN USE CONTeXT TO MAKE IT PRESENT THROUGH OUT THE WEB APP
+      setUser(data);
+
+      // Redirect to the login page after successful sign-in
+      navigate("/sign-in");
+      toast.success("Account created, check your mail for verification link");
+
+    } catch (error) {
+      // Handle sign-up error
+      console.error("Error signing up:");
+      setError(
+        "Failed to sign up. Please check your credentials and try again."
+      );
+      toast.error("Failed to sign up. " + error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>

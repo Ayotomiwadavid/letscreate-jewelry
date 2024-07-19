@@ -5,11 +5,14 @@ import App from "./App.jsx";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import AuthStatusProvider from "./Context/Usecontext.jsx";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-    <ToastContainer />
-  </BrowserRouter>,
+  <AuthStatusProvider>
+    <BrowserRouter>
+      <App />
+      <ToastContainer />
+    </BrowserRouter>
+  </AuthStatusProvider>,
   document.getElementById("root")
 );
