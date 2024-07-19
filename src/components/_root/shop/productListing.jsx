@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./productCard";
-import fetchAllProducts from '../../../utils/Products/GetAllProducts'
+import { products } from "../../../data";
+// import fetchAllProducts from '../../../utils/Products/GetAllProducts'
 import FilterBar from "./filterBar";
 
 export default function productListing() {
-  const [products, setProducts] = useState([]);
+  //   const [products, setProducts] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchProductData = async () => {
-        try {
-            const allProducts = await fetchAllProducts();
-            setProducts(allProducts);
-        } catch (error) {
-           console.error('Error fetching Products', error)
-        }
-    };
+  //   useEffect(() => {
+  //     const fetchProductData = async () => {
+  //         try {
+  //             const allProducts = await fetchAllProducts();
+  //             setProducts(allProducts);
+  //         } catch (error) {
+  //            console.error('Error fetching Products', error)
+  //         }
+  //     };
 
-    fetchProductData();
-}, []);
+  //     fetchProductData();
+  // }, []);
 
   return (
     <>

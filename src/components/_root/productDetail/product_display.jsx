@@ -1,27 +1,19 @@
 import React, { useEffect, useState } from "react";
-import fetchProductById from "../../../utils/Products/GetProductById";
+import { products } from "../../../data";
 import { useParams } from "react-router-dom";
 import Add_to_cart from "./add_to_cart";
 
 export default function ProductDisplay() {
-  const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [product, setProduct] = useState(null);
   const { productId } = useParams();
-  console.log(productId);
-
+  
   useEffect(() => {
-    const fetchProductData = async () => {
-      try {
-        const product = await fetchProductById(productId);
-        setProduct(product);
-        console.log(product);
-      } catch (error) {
-        console.error("Error fetching Products", error);
-      }
-    };
-
-    fetchProductData();
-  }, [productId]); // Include productId in the dependency array
+    // Convert productId to a number if necessary
+    const id = parseInt(productId, 10);
+    const fetchedProduct = products.find((prod) => prod.id === id);
+    setProduct(fetchedProduct);
+  }, [productId]);
 
   // Handlers for incrementing and decrementing quantity
   const handleIncrement = () => setQuantity((prev) => prev + 1);
@@ -32,7 +24,7 @@ export default function ProductDisplay() {
     <div>
       <section className="product-display p-5">
         {product ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 md:m-10 md:mx-28">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:m-10 md:mx-5">
             <div className="col ">
               <div className="image-display">
                 <img src={product.image} className=" p-4 w-96" alt="" />
@@ -44,7 +36,7 @@ export default function ProductDisplay() {
                 <h1 className="text-3xl uppercase pb-4">{product.title}</h1>
                 <p className="price text-gray-500 text-2xl">${product.price}</p>
                 <br />
-                <p className="price text-gray-500 text-lg pb-8">
+                <p className="price text-gray-500 text-lg pb-4">
                   {product.category}
                 </p>
 

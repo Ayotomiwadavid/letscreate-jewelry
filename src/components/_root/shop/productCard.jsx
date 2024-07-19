@@ -6,7 +6,7 @@ export default function productCard({ product, sold }) {
 
   return (
     <div
-      className="bg-white text-left rounded-lg p-4 justify-center items-center cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+      className="bg-white text-left rounded-lg p-3 justify-center items-center cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
       onClick={() => navigate(`/products/${product.id}`)}
     >
       <div className="relative overflow-hidden w-48 h-48 mx-auto mb-4">

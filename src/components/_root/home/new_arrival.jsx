@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../shop/productCard";
-import fetchAllProducts from "../../../utils/Products/GetAllProducts";
+// import fetchAllProducts from "../../../utils/Products/GetAllProducts";
+import { products } from "../../../data";
 
 function NewArrival() {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchProductData = async () => {
-      try {
-        const allProducts = await fetchAllProducts();
-        setProducts(allProducts);
-      } catch (error) {
-        console.error("Error fetching Products", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchProductData = async () => {
+  //     try {
+  //       const allProducts = await fetchAllProducts();
+  //       setProducts(allProducts);
+  //     } catch (error) {
+  //       console.error("Error fetching Products", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchProductData();
-  }, []);
+  //   fetchProductData();
+  // }, []);
 
   return (
     <section className="bg-opacity-20  text-primary py-6">
@@ -37,12 +38,6 @@ function NewArrival() {
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        {isLoading ? (
-          <div className="flex gap-3 my-12 justify-center items-center">
-            <div className="animate-spin rounded-full h-5 w-5 border-b-4 border-black"></div>
-            Loading...
-          </div>
-        ) : null}
       </>
     </section>
   );
