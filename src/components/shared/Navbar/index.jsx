@@ -70,7 +70,7 @@ function Navbar() {
               <img src={profileImage} alt="Profile Icon" className="h-[70px] w-[70px] rounded-full my-1"/>
               <article className="w-full flex flex-col items-center justify-center">
               <h4 className="font-bold text-base text-[#94958F]">Hello, {authStatusValue && user.displayName}</h4>
-              <p className="font-light text-sm py-1">{authStatusValue && user.email}</p>
+              <p className="font-light text-center text-sm py-1">{authStatusValue && user.email}</p>
               </article>
             </div>
             <button onClick={handleLogOut} className="capitalize bg-[#2EFAE7] h-[45px] w-full text-center rounded-md outline-none cursor-pointer text-white font-bold">{loading ? <div className="flex gap-3 justify-center items-center">
