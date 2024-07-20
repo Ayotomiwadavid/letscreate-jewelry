@@ -27,7 +27,7 @@ function Categories() {
               <br />
             </span>
             <span className="md:text-2xl text-xl text-center font-bold font-['Cormorant']">
-              1 products
+              1 product
             </span>
           </div>
         </div>
@@ -43,7 +43,7 @@ function Categories() {
               <br />
             </span>
             <span className="md:text-2xl text-xl text-center font-bold font-['Cormorant']">
-              1 products
+              1 product
             </span>
           </div>
         </div>
