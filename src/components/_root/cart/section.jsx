@@ -5,7 +5,7 @@ export default function Cart() {
     <div className="flex bg-[#FAF4F4] h-[15em] w-full items-center justify-center gap-12 p-12">
       <div className="w-[350px]">
         <h1 className="text-[32px] font-bold">Free Delivery</h1>
-        <div>For all oders over $50, consectetur adipim scing elit.</div>
+        <div>For all orders over $50, consectetur adipim scing elit.</div>
       </div>
       <div className="w-[350px]">
         <h1 className="text-[32px] font-bold">90 Days Return</h1>

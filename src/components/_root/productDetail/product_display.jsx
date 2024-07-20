@@ -53,7 +53,6 @@ export default function ProductDisplay() {
                     src={img}
                     onClick={() => handleImageChange(index)}
                     alt="Product Image"
-                    // width="100"
                     className="shadow-md cursor-pointer w-[700px] h-[70px] md:w-[120px] md:h-[120px]"
                   />
                 ))}

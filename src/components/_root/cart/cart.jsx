@@ -54,7 +54,7 @@ export default function Cart() {
         {products.map((product, index) => (
           <div key={index} className="flex flex-row mt-12 gap-3 items-center space-x-3 justify-between">
             <div className="flex flex-row gap-6 space-x-8 text-gray-400 items-center justify-start">
-              <img src={product.image} className="w-28 h-28 object-contain" alt={product.title} />
+              <img src={product.image[0]} className="w-28 h-28 object-contain" alt={product.title} />
               <div>${product.price}</div>
             </div>
             <input
