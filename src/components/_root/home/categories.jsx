@@ -11,7 +11,7 @@ function Categories() {
         />
       </div>
 
-      <div className="flex grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 mx-3 gap-3 items-center justify-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 mx-3 place-items-center items-center justify-center">
         <div className="flex flex-col gap-3 items-start justify-start">
           <img
             className="w-[120px] h-[115px] p-3 bg-white rounded-full relative"
@@ -19,11 +19,11 @@ function Categories() {
           />
           <div>
             <span className="text-2xl font-bold font-['Cormorant']">
-              Rings
+              Bracelet
               <br />
             </span>
             <span className="text-2xl font-bold font-['Cormorant']">
-              7 products
+              1 products
             </span>
           </div>
         </div>
@@ -39,7 +39,7 @@ function Categories() {
               <br />
             </span>
             <span className="text-2xl font-bold font-['Cormorant']">
-              7 products
+              1 products
             </span>
           </div>
         </div>
@@ -51,11 +51,11 @@ function Categories() {
           />
           <div>
             <span className="text-2xl font-bold font-['Cormorant']">
-              Rings
+              Necklace
               <br />
             </span>
             <span className="text-2xl font-bold font-['Cormorant']">
-              7 products
+              2 products
             </span>
           </div>
         </div>
@@ -67,11 +67,11 @@ function Categories() {
           />
           <div>
             <span className="text-2xl font-bold font-['Cormorant']">
-              Rings
+              Earrings
               <br />
             </span>
             <span className="text-2xl font-bold font-['Cormorant']">
-              7 products
+              1 products
             </span>
           </div>
         </div>
