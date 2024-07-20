@@ -96,6 +96,11 @@ module.exports = {
         zoom: "zoom 1s ease-in-out infinite",
         tada: "tada 1.5s ease-in-out infinite",
       },
+
+      backgroundImage: {
+        'pageFirstBannerDesktop': "url('./assets/images/Signature_Tile_Desktop.jpg')",
+        'pageFirstBannerMobile': "url('./assets/images/Signature_Tile_Mobile.jpg')",
+      }
     },
   },
   plugins: [],

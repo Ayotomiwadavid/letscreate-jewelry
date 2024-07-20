@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../../../assets/heros_bg/home_bg.png";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -17,9 +18,9 @@ function HeroSection() {
           </p>
         </div>
         <div className="w-full flex items-center justify-start">
-          <button className="font-bold capitalize text-lg bg-primary transition-all duration-500 text-white hover:bg-white hover:text-primary py-3 rounded-lg text-center w-[200px] md:w-[15em]">
+          <Link to='/shop' className="font-bold capitalize text-lg bg-primary transition-all duration-500 text-white hover:bg-white hover:text-primary py-3 rounded-lg text-center w-[200px] md:w-[15em]">
             shop now
-          </button>
+          </Link>
         </div>
       </div>
     </section>
