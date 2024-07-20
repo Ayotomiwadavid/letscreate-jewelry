@@ -36,12 +36,12 @@ export default function ProductDisplay() {
     <div>
       <section className="product-display p-5">
         {product ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 md:m-10 md:mx-5">
-            <div className="col w-full flex flex-col items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-content-center place-items-center md:m-10 md:mx-5">
+            <div className="col w-full flex flex-col gap-5 items-center justify-center">
               <div className="image-display w-full">
                 <img
                   src={product.image[imageSrc]}
-                  className=" p-4 w-[80%] h-[400px]"
+                  className="w-full md:h-[400px] md:w-[80%]"
                   alt=""
                 />
               </div>
@@ -53,8 +53,8 @@ export default function ProductDisplay() {
                     src={img}
                     onClick={() => handleImageChange(index)}
                     alt="Product Image"
-                    width="100"
-                    className="shadow-md cursor-pointer"
+                    // width="100"
+                    className="shadow-md cursor-pointer w-[700px] h-[70px] md:w-[120px] md:h-[120px]"
                   />
                 ))}
               </div>
