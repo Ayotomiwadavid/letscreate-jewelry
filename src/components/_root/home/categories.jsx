@@ -22,11 +22,11 @@ function Categories() {
             src={BraceletImage}
           />
           <div>
-            <span className="text-2xl font-bold font-['Cormorant']">
+            <span className="md:text-2xl text-xl font-bold font-['Cormorant']">
               Bracelet
               <br />
             </span>
-            <span className="text-2xl font-bold font-['Cormorant']">
+            <span className="md:text-2xl text-xl font-bold font-['Cormorant']">
               1 products
             </span>
           </div>
@@ -38,11 +38,11 @@ function Categories() {
             src={BlueDiamondSwingRing}
           />
           <div>
-            <span className="text-2xl font-bold font-['Cormorant']">
+            <span className="md:text-2xl text-xl font-bold font-['Cormorant']">
               Rings
               <br />
             </span>
-            <span className="text-2xl font-bold font-['Cormorant']">
+            <span className="md:text-2xl text-xl font-bold font-['Cormorant']">
               1 products
             </span>
           </div>
@@ -54,11 +54,11 @@ function Categories() {
             src={crossOfLightPendant}
           />
           <div>
-            <span className="text-2xl font-bold font-['Cormorant']">
+            <span className="md:text-2xl text-xl font-bold font-['Cormorant']">
               Necklace
               <br />
             </span>
-            <span className="text-2xl font-bold font-['Cormorant']">
+            <span className="md:text-2xl text-xl font-bold font-['Cormorant']">
               2 products
             </span>
           </div>
@@ -70,18 +70,18 @@ function Categories() {
             src={EraingImage}
           />
           <div>
-            <span className="text-2xl font-bold font-['Cormorant']">
+            <span className="md:text-2xl text-xl font-bold font-['Cormorant']">
               Earrings
               <br />
             </span>
-            <span className="text-2xl font-bold font-['Cormorant']">
+            <span className="md:text-2xl text-xl font-bold font-['Cormorant']">
               1 products
             </span>
           </div>
         </div>
       </div>
 
-      <div className="w-full text-white/opacity-60 text-[43px] md:text-[83px] font-bold font-['Cormorant']">
+      <div className="w-full text-white/opacity-60 text-[35px] md:text-[83px] font-bold font-['Cormorant']">
         WE ARE HERE, FOR{" "} YOU
       </div>
     </section>
