@@ -11,6 +11,7 @@ import ProductDetail from "./components/_root/productDetail/index";
 import ScrollToTop from "./BackToTop/ScrollToTop";
 import { AuthStatus } from "./Context/Usecontext";
 import { getCurrentUser } from "./Controller";
+import ProtectedRoute from "./Context/ProtectedRoute";
 
 function App() {
   const appContext = useContext(AuthStatus);
@@ -44,7 +45,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/checkout" element={<ProtectedRoute element={CheckOut} />} /> {/* Protect this route */}
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
