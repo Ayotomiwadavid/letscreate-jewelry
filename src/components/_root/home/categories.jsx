@@ -1,4 +1,8 @@
 import React from "react";
+import BraceletImage from '../../../assets/ProductImages/CrossStripes&StoneBracelet.jpg'
+import BlueDiamondSwingRing from '../../../assets/ProductImages/BlueDiamondSwingRing.jpg'
+import crossOfLightPendant from '../../../assets/ProductImages/crossOfLightPendant(Gold).jpg'
+import EraingImage from '../../../assets/ProductImages/BE3PD15S3.jpeg'
 
 function Categories() {
   return (
@@ -15,7 +19,7 @@ function Categories() {
         <div className="flex flex-col gap-3 items-start justify-start">
           <img
             className="w-[120px] h-[115px] p-3 bg-white rounded-full relative"
-            src="/assets/imgs/ring-1.png"
+            src={BraceletImage}
           />
           <div>
             <span className="text-2xl font-bold font-['Cormorant']">
@@ -31,7 +35,7 @@ function Categories() {
         <div className="flex flex-col gap-3 items-start justify-start">
           <img
             className="w-[120px] h-[115px] p-3 bg-white rounded-full relative"
-            src="/assets/imgs/ring-1.png"
+            src={BlueDiamondSwingRing}
           />
           <div>
             <span className="text-2xl font-bold font-['Cormorant']">
@@ -47,7 +51,7 @@ function Categories() {
         <div className="flex flex-col gap-3 items-start justify-start">
           <img
             className="w-[120px] h-[115px] p-3 bg-white rounded-full relative"
-            src="/assets/imgs/ring-1.png"
+            src={crossOfLightPendant}
           />
           <div>
             <span className="text-2xl font-bold font-['Cormorant']">
@@ -63,7 +67,7 @@ function Categories() {
         <div className="flex flex-col gap-3 items-start justify-start">
           <img
             className="w-[120px] h-[115px] p-3 bg-white rounded-full relative"
-            src="/assets/imgs/ring-1.png"
+            src={EraingImage}
           />
           <div>
             <span className="text-2xl font-bold font-['Cormorant']">
