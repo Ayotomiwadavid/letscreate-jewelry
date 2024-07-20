@@ -9,6 +9,13 @@ export default function ProductDisplay() {
   const { productId } = useParams();
   const [imageSrc, setImageSrc] = useState(0);
 
+  const [selectedColorIndex, setSelectedColorIndex] = useState(null);
+
+  const handleColorChange = (index) => {
+    setSelectedColorIndex(index);
+    console.log("Selected color index:", index);
+  };
+
   useEffect(() => {
     // Convert productId to a number if necessary
     const id = parseInt(productId, 10);
@@ -21,9 +28,9 @@ export default function ProductDisplay() {
   const handleDecrement = () =>
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
-  const handleImageChange = (index) =>{
-    setImageSrc(index)
-  }
+  const handleImageChange = (index) => {
+    setImageSrc(index);
+  };
 
   return (
     <div>
@@ -40,7 +47,15 @@ export default function ProductDisplay() {
               </div>
               <div className="w-full px-4 flex gap-4 items-center justify-start">
                 {product.image.map((img, index) => (
-                  <img key={index} id={index} src={img} onClick={() => handleImageChange(index)} alt="Product Image" width="100" className="shadow-md cursor-pointer"/>
+                  <img
+                    key={index}
+                    id={index}
+                    src={img}
+                    onClick={() => handleImageChange(index)}
+                    alt="Product Image"
+                    width="100"
+                    className="shadow-md cursor-pointer"
+                  />
                 ))}
               </div>
             </div>
@@ -62,8 +77,30 @@ export default function ProductDisplay() {
                 </p>
 
                 <div className="w-full flex flex-col items-start justify-center py-3 gap-3 px-1">
-                  <p className="font-bold text-xl capitalize font-serif ">category: <span className="font-serif font-light text-lg capitalize">{product.Category}</span></p>
-                  <p className="font-bold text-xl capitalize font-serif ">Tags: <span className="font-serif font-light text-lg capitalize">{product.Tags}</span></p>
+                  <p className="font-bold text-xl capitalize font-serif ">
+                    category:{" "}
+                    <span className="font-serif font-light text-lg capitalize">
+                      {product.Category}
+                    </span>
+                  </p>
+                  <p className="font-bold text-xl capitalize font-serif ">
+                    Tags:{" "}
+                    <span className="font-serif font-light text-lg capitalize">
+                      {product.Tags}
+                    </span>
+                  </p>
+                  <aside className="flex items-center gap-3 justify-start">
+                    {product.colors.map((color, index) => {
+                      let styleJs = {
+                        padding: '15px 15px',
+                        borderRadius: '50%',
+                        cursor: 'pointer',
+                        background: color,
+                        border: selectedColorIndex === index ? '2px solid #2EFAE7' : 'none',
+                      };
+                      return <div key={index} id={index} className='' style={styleJs} onClick={() => handleColorChange(index)}></div>;
+                    })}
+                  </aside>
                 </div>
 
                 <div className="flex gap-10 items-center my-6">
