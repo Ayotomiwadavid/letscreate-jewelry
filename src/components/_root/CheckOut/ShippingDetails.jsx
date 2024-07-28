@@ -55,7 +55,7 @@ export default function Grid({
 
       <hr className="h-px my-3 bg-gray-200 border-1 dark:bg-gray-400"></hr>
       <main className="flex flex-col gap-3">
-        <section>
+        {/* <section>
           <div className="flex flex-row gap-3">
             <input type="radio" className="bg-gray-50" />
             <p className="text-sm">Direct Bank Transfer</p>
@@ -83,19 +83,10 @@ export default function Grid({
           this website, to manage access to your account, and for other purposes
           described in our{" "}
           <span className="font-bold text-black">privacy policy.</span>
-        </p>
+        </p> */}
 
-        <div className="mt-4">
-          <button
-            // disabled={!isEdited}
-            type="submit"
-            onClick={createUserAccount}
-          >
-            <PaystackButton
-              className="py-4 mx-[3cm] px-12 me-2 mb-2 text-sm font-normal focus:outline-none bg-white rounded-xl border hover:bg-[#fcd34d] hover:text-white justify-center"
-              {...componentProps}
-            />
-          </button>
+        <div className="mt-4 w-full py-6 flex items-center justify-center">
+          <button type="submit" className="w-[150px] h-[55px] rounded-lg bg-[#2EFAE7] font-serif text-lg text-white font-bold shadow-lg capitalize" onClick={createUserAccount}>check out</button>
         </div>
       </main>
     </section>

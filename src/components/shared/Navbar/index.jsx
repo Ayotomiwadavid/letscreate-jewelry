@@ -56,9 +56,9 @@ function Navbar() {
               </div>
 
               <div className="ml-auto flex bg-gray-200 px-4 pt-3 pb-2 text-[20px] items-center justify-center gap-4 rounded-md cursor-pointer">
-               { !authStatusValue ? <Link to={"/sign-up"} className="">
+               {/* { !authStatusValue ? <Link to={"/sign-up"} className="">
                   <ion-icon name="person-outline"></ion-icon>
-                </Link> : <ion-icon name="person-outline" onClick={handleSmallMenu}></ion-icon>}
+                </Link> : <ion-icon name="person-outline" onClick={handleSmallMenu}></ion-icon>} */}
                 <Link to={"/cart"}>
                   <ion-icon name="cart-outline"></ion-icon>
                 </Link>
