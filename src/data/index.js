@@ -41,7 +41,7 @@ The "Cross of Light Pendant" is a beautiful expression of spirituality and grace
 
 Made from high-quality materials, including durable metals and sparkling embellishments, the "Cross of Light Pendant" is designed to be both stylish and enduring. Treat yourself or a loved one to this meaningful pendant and let the light of faith shine brightly in your heart.`,
     Availability: "available",
-    colors: ["#FFD700", "#C0C0C0"],
+    colors: [{gold:"#FFD700"}, {silver:"#C0C0C0"}],
     Category: "Necklaces",
     Tags: 'Gold, Silver, Women'
   },
@@ -57,7 +57,7 @@ Made from high-quality materials, including durable metals and sparkling embelli
     title: "Cross Stripes & Stone Bracelet",
     description: ` Introducing our Cross Stripes & Stone Bracelet, a harmonious blend of timeless elegance and contemporary flair. Crafted with precision and care, this bracelet features alternating stripes of sleek metal and captivating stones, creating a striking visual contrast that adds depth and dimension to any ensemble. The combination of classic cross patterns and shimmering stones lends a touch of sophistication and charm to this versatile accessory. Whether worn alone for a subtle statement or layered with other bracelets for a bolder look, our Cross Stripes & Stone Bracelet is sure to become a cherished addition to your jewelry collection.`,
     Availability: "available",
-    colors: ["#FFD700"],
+    colors: [{gold:"#FFD700"}],
     Category: "Bracelet",
     Tags: 'Gold, Women',
   },
@@ -74,7 +74,7 @@ Made from high-quality materials, including durable metals and a sleek finish, t
 Elevate your jewelry game with the Echoes Necklace Extension Piece and enjoy the freedom to create unique and personalized looks that reflect your individual style.`,
 
     Availability: "available",
-    colors: ["#FFD700"],
+    colors: [{gold:"#FFD700"}],
     Category: "Charm & Dangles ",
     Tags: 'Gold, Mens, Modern',
   },
@@ -94,7 +94,7 @@ The "Blue Diamond Swing Ring" is a statement piece that exudes sophistication an
 Made from high-quality materials, including ethically sourced diamonds and luxurious metals, our "Blue Diamond Swing Ring" is designed to be both luxurious and enduring. Treat yourself or a loved one to this exquisite ring and elevate your style with its captivating beauty.`,
     Availability: "available",
     colors: [
-      '#C0C0C0',
+      {silver:'#C0C0C0'},
     ],
     Category: ' Rings',
     Tags: 'Silver, women',
@@ -115,7 +115,7 @@ The vibrant blue hues add a pop of color to any ensemble, making these earrings 
 Made from high-quality materials, including durable metals and sparkling stones, our Blue Stripes & Stone Earrings are designed to be both stylish and long-lasting. Treat yourself or someone special to these stunning earrings and elevate your style with a touch of bold sophistication.`,
 
     Availability: "available",
-    colors: ["#C0C0C0"],
+    colors: [{gold:"#C0C0C0"}],
     Category: "Earrings",
     Tags:'Gold, Women'
   },

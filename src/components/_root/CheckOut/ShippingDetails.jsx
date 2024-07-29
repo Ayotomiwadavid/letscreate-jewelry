@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { PaystackButton } from "react-paystack";
 
-export default function Grid({
-  createUserAccount,
-  isLoading,
-  email,
-  name,
-  phone,
-  isEdited,
-}) {
+export default function Grid({createUserAccount, isLoading, email, name, phone, isEdited}) {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -19,17 +11,50 @@ export default function Grid({
     }
   }, []);
 
-  const publicKey = "pk_test_07d817c447d4459aa3bd06f78eac1e72ff675e3c";
-  const componentProps = {
-    email: email,
-    amount: total * 100,
-    metadata: { name: name, phone: phone },
-    publicKey,
-    text: "Pay Now",
-    onSuccess: () =>
-      toast.success("Thanks for doing business with us! Come back soon!!"),
-    // onClose: () => toast.error("Wait! Don't leave :("),
-  };
+  //Stripe backend server endpoint
+  const endPointUrl = 'http://localhost:5001/';
+
+  //stripe seceret key
+  const seceretKey = 'sk_test_2IIZj9qvETFVO3EvJYJHAUQ100SCzRfnk5'
+
+  //request body onject
+  const requestBodyObject = {
+    stripeSecretKey: seceretKey,
+    productPrice: total * 100,
+    productName: 'Lets create products Check out',
+    mode: 'payment',
+    paymentMethod: 'card',
+    successUrl: 'http://localhost:5173/checkout',
+    cancelUrl: 'http://localhost:5173/checkout',
+    quantity: 1,
+    currency: 'usd'
+  }
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(requestBodyObject)
+  }
+
+  const handlePayment = () => {
+    fetch(endPointUrl, options)
+
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      return response.json().then(json => Promise.reject(json));
+    })
+    .then(({url}) => {
+      window.location.href = url;
+    })
+    .catch(err => {
+      console.log('An Error Occurred:', err.message);
+    })
+  }
+
 
   return (
     <section className="flex flex-col bg-white p-5 mt-3">
@@ -86,7 +111,7 @@ export default function Grid({
         </p> */}
 
         <div className="mt-4 w-full py-6 flex items-center justify-center">
-          <button type="submit" className="w-[150px] h-[55px] rounded-lg bg-[#2EFAE7] font-serif text-lg text-white font-bold shadow-lg capitalize" onClick={createUserAccount}>check out</button>
+          <button type="submit" className="w-[150px] h-[55px] rounded-lg bg-[#2EFAE7] font-serif text-lg text-white font-bold shadow-lg capitalize" onClick={handlePayment}>check out</button>
         </div>
       </main>
     </section>

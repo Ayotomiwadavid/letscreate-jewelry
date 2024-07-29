@@ -5,7 +5,7 @@ import Footer from '../../shared/Footer'
 import ShippingDetails from './FormField'
 
 
-export default function CheckOutPage() {
+export default function CheckOutPage({formFieldsOnchange, handleFormSubmission}) {
   return (
     <div>
       <Navbar/>

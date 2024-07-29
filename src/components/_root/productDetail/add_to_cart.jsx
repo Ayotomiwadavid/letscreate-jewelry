@@ -1,11 +1,12 @@
 import React from "react";
 import addToCart from "../../../utils/Products/AddToCart";
-export default function CartPage({ product, quantity }) {
+export default function CartPage({ product, quantity, prefferedColor}) {
   const handleClick = () => {
     // Create an object containing both product data and quantity
     const productWithQuantity = {
       ...product,
       quantity: quantity,
+      color: prefferedColor
     };
     addToCart(productWithQuantity);
   };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { products } from "../../../data";
 import { useParams } from "react-router-dom";
 import Add_to_cart from "./add_to_cart";
+import ColorList from "./Colorlist";
 
 export default function ProductDisplay() {
   const [quantity, setQuantity] = useState(1);
@@ -89,19 +90,9 @@ export default function ProductDisplay() {
                     </span>
                   </p>
                   <aside className="flex items-center gap-3 justify-start">
-                    {product.colors.map((color, index) => {
-                      let styleJs = {
-                        padding: '15px 15px',
-                        borderRadius: '50%',
-                        cursor: 'pointer',
-                        background: color,
-                        border: selectedColorIndex === index ? '2px solid #2EFAE7' : 'none',
-                      };
-                      return <div key={index} id={index} className='' style={styleJs} onClick={() => handleColorChange(index)}></div>;
-                    })}
+                    <ColorList colors={product.colors} onColorSelect={handleColorChange}/>
                   </aside>
                 </div>
-
                 <div className="flex gap-10 items-center my-6">
                   <div className="border w-20 flex justify-center items-center py-1 px-auto">
                     <button
@@ -125,7 +116,7 @@ export default function ProductDisplay() {
                   </div>
 
                   <div className="add-to-cart">
-                    <Add_to_cart quantity={quantity} product={product} />
+                    <Add_to_cart quantity={quantity} product={product} prefferedColor={selectedColorIndex} />
                   </div>
                 </div>
               </div>

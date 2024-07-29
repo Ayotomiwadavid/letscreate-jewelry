@@ -68,18 +68,12 @@ export default function FormField() {
           <label className="block mb-2 text-sm font-medium">
             Country / Region
           </label>
-          <select
+          <input
             type="text"
             value={country}
             onChange={(e) => setCountry(e.target.value)}
             className=" mb-4 bg-gray-30 text-sm rounded-md block w-full p-3.5 border border-gray-300"
-          >
-            <option>Choose a country</option>
-            <option value="US">United States</option>
-            <option value="CA">Canada</option>
-            <option value="FR">France</option>
-            <option value="DE">Germany</option>
-          </select>
+          />
         </div>
 
         <div>
@@ -108,18 +102,12 @@ export default function FormField() {
 
         <div className="mb-6">
           <label className="block mb-2 text-sm font-medium">Province</label>
-          <select
+          <input
             type="text"
             value={province}
             onChange={(e) => setProvince(e.target.value)}
             className="bg-gray-30 text-sm rounded-md block w-full p-3.5 border border-gray-300"
-          >
-            <option>Choose a country</option>
-            <option value="US">United States</option>
-            <option value="CA">Canada</option>
-            <option value="FR">France</option>
-            <option value="DE">Germany</option>
-          </select>
+          />
         </div>
 
         <div className="mb-6">
