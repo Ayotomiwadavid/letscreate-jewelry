@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 import getCartItems from "../../../utils/Products/FetchCart";
 
 export default function Cart() {
@@ -20,7 +20,6 @@ export default function Cart() {
     console.log("Cart initialized:", storedProducts);
   }, []);
 
-  // Effect to update localStorage when products change
   useEffect(() => {
     const subtotal = getSubtotal();
     localStorage.setItem('total', subtotal); // Assuming no tax or shipping for simplification
@@ -41,6 +40,11 @@ export default function Cart() {
     return products.reduce((acc, product) => acc + product.price * product.quantity, 0);
   };
 
+  const handleDeleteProduct = (index) => {
+    const newProducts = products.filter((_, i) => i !== index);
+    setProducts(newProducts);
+    localStorage.setItem('cartItems', JSON.stringify(newProducts));
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[6em] bg-blue w-full items-start justify-between px-3 md:px-12 py-12">
@@ -68,7 +72,7 @@ export default function Cart() {
               <div className="flex flex-col justify-end items-end text-left">
                 <div>${(product.price * product.quantity).toFixed(2)}</div>
               </div>
-              <ion-icon name="trash-outline"></ion-icon>
+              <ion-icon name="trash-outline" onClick={() => handleDeleteProduct(index)}></ion-icon>
             </div>
           </div>
         ))}
