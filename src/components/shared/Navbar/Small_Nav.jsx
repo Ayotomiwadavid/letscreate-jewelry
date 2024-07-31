@@ -24,6 +24,12 @@ function SecondNavbar() {
           >
             Contact us
           </Link>
+          <Link
+            to={"/blogs"}
+            className="text-base font-medium text-gray-900 hover:text-gray-700"
+          >
+            Blogs
+          </Link>
         </ul>
       </nav>
     </header>

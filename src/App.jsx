@@ -13,6 +13,7 @@ import { AuthStatus } from "./Context/Usecontext";
 import { getCurrentUser } from "./Controller";
 import ProtectedRoute from "./Context/ProtectedRoute";
 import Thankyou from "./components/_root/CheckOut/Thankyou";
+import BlogPage from "./components/_root/Blog/Index";
 
 function App() {
   // const appContext = useContext(AuthStatus);
@@ -50,6 +51,7 @@ function App() {
         <Route path="/thank-you" element={<Thankyou />}/>
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/blogs" element={<BlogPage />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
       </Routes>
     </>

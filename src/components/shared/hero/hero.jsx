@@ -1,5 +1,4 @@
 import React from "react";
-import Cart_Hero from "../../../assets/heros_bg/contact.png";
 import { Link } from "react-router-dom";
 // import backy from '../../../assets/images/Signature_Tile_Desktop.jpg'
 
@@ -16,7 +15,6 @@ const Hero = ({title}) => {
           <Link to={"/"}>{title}</Link>
         </div>
       </section>
-      {/* <img className="w-[40vw] h-[230px] object-cover" alt="/" src={Cart_Hero} /> */}
     </div>
   );
 };
