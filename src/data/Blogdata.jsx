@@ -5,12 +5,13 @@ import MostpopularGems from '../assets/BlogImages/MostpopularGems.jpeg'
 
 const Blogs = [
   {
+    slug: "fascinating-world-of-gemstones",
     blogTitle: "The Fascinating World of Gemstones: Understanding Their Differences",
     blogDescription: "Emeralds have enchanted humans for millennia with their vivid green color and rich history. Here are 20 fascinating facts about natural emeralds, complete with scientific details and historical insights.",
     blogImage: fACILITATINGIMAGE,
-    mainBlog: `# The Fascinating World of Gemstones: Understanding Their Differences
+    mainBlog: `#### The Fascinating World of Gemstones: Understanding Their Differences
 
-    ![Visual Guide to Gemstone Types and Their Unique Properties](../assets/BlogImages/RealVsFake.webp)
+    ![Visual Guide to Gemstone Types and Their Unique Properties](https://images.app.goo.gl/iFMRZoPN7ZcixAg38)
 
 ## Introduction
 
@@ -165,6 +166,7 @@ By delving into the world of gemstones, we uncover the incredible diversity and 
 `,
   },
   {
+    slug: "how-to-tell-if-a-gemstone-is-fake-or-real",
     blogTitle: "How to Tell If a Gemstone Is Fake or Real",
     blogDescription:
       "Gemstones have been cherished for their beauty and rarity for millennia. Their allure spans cultures and eras, with each stone holding unique properties that make it distinct. This article delves into the scientific and factual differences between gemstones, covering aspects such as chemical composition, hardness, color variations, formation processes, and uses. By the end, you will have a deeper appreciation for these natural wonders and understand what sets each gemstone apart.",
@@ -282,6 +284,7 @@ By following the methods outlined in this guide, you can confidently assess the 
 `
   },
   {
+    slug: "the-most-popular-gemstones-in-jewelry",
     blogTitle: "The Most Popular Gemstones in Jewelry",
     blogDescription: "Jewelry has been an integral part of human culture and adornment for millennia, with gemstones playing a central role in crafting stunning and meaningful pieces. Each gemstone carries its unique allure, history, and significance, making it an essential element in jewelry design. In this article, we will explore some of the most popular gemstones used in jewelry: diamonds, sapphires, rubies, emeralds, opals, amethysts, topaz, garnets, peridots, and turquoise. We will delve into their history, properties, types, and applications in the jewelry industry.",
     blogImage: MostpopularGems,
@@ -292,7 +295,6 @@ By following the methods outlined in this guide, you can confidently assess the 
 Jewelry has been an integral part of human culture and adornment for millennia, with gemstones playing a central role in crafting stunning and meaningful pieces. Each gemstone carries its unique allure, history, and significance, making it an essential element in jewelry design. In this article, we will explore some of the most popular gemstones used in jewelry: diamonds, sapphires, rubies, emeralds, opals, amethysts, topaz, garnets, peridots, and turquoise. We will delve into their history, properties, types, and applications in the jewelry industry.
 
 ## Diamonds
-
 ### History and Significance
 
 Diamonds have been treasured for centuries and are often associated with wealth, power, and eternal love. The name "diamond" comes from the Greek word "adamas," meaning "unconquerable" or "invincible" due to their remarkable hardness. Diamonds have been used in jewelry since ancient times, with evidence of their use dating back to the 4th century BC in India ([Gemological Institute of America, 2024](https://www.gia.edu)).

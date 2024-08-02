@@ -1,7 +1,8 @@
 import React from "react";
 import RealVsFake from "../../../assets/BlogImages/RealVsFake.webp";
+import { Link } from "react-router-dom";
 
-const Blogcard = ({blogImage, blogDescription, BlogTitle}) => {
+const Blogcard = ({blogImage, blogDescription, BlogTitle, blogSlug}) => {
   return (
     <aside className="w-[350px] h-[450px] transition-all duration-500 hover:shadow-xl rounded-md flex flex-col items-center justify-start gap-4">
       <div className="w-full h-[200px] flex items-center justify-center">
@@ -16,9 +17,9 @@ const Blogcard = ({blogImage, blogDescription, BlogTitle}) => {
       </h1>
       <p className="overflow-hidden text-ellipsis h-[100px] px-2 ">{blogDescription}</p>
       <div className="w-full flex items-center justify-start px-2 py-3">
-        <button className="capitalize text-center h-[45px] w-[200px] rounded-lg flex items-center justify-center text-white bg-[#000]">
+        <Link to={`/blogdetails/${blogSlug}`} className="capitalize text-center h-[45px] w-[200px] rounded-lg flex items-center justify-center text-white bg-[#000]">
           Continue Reading
-        </button>
+        </Link>
       </div>
     </aside>
   );
