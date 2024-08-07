@@ -70,6 +70,15 @@ const Blogdetails = () => {
                 const imagePath = getImagePath(src);
                 return <div className="w-full flex items-center justify-center md:justify-start py-5"><img className="md:w-[75%] w-full max-h-[650px]" src={imagePath} alt={alt} /></div>;
               },
+
+              p: ({ children }) => <p className="my-4">{children}</p>, // Apply custom styles to paragraphs
+              h1: ({ children }) => <h1 className="font-bold text-4xl my-6">{children}</h1>,
+              h2: ({ children }) => <h2 className="font-bold text-3xl my-5">{children}</h2>,
+              h3: ({ children }) => <h3 className="font-bold text-2xl my-4">{children}</h3>,
+              h4: ({ children }) => <h4 className="font-bold text-xl my-3">{children}</h4>,
+              h5: ({ children }) => <h5 className="font-bold text-lg my-2">{children}</h5>,
+              h6: ({ children }) => <h6 className="font-bold text-base my-1">{children}</h6>,
+              strong: ({ children }) => <strong className="font-bold">{children}</strong>,
             }}
           >
             {blogPost.mainBlog}
