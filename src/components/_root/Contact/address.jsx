@@ -4,7 +4,7 @@ import Addr from "../../../assets/images/addr.png";
 export default function Address() {
   return (
     <>
-      <div className="relative mx-3 md:mx-12">
+      <div className="relative mx-3 md:mx-12 mb-5">
         <div className="text-center mt-12">
           <div className="text-black text-[30px] font-bold font-['Cormorant Garamond']">
             We are always eager to hear from you!
