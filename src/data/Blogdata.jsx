@@ -4,14 +4,12 @@ import MostpopularGems from '../assets/BlogImages/MostpopularGems.jpeg'
 
 
 const Blogs = [
-  {
-    slug: "fascinating-world-of-gemstones",
-    blogTitle: "The Fascinating World of Gemstones: Understanding Their Differences",
-    blogDescription: "Emeralds have enchanted humans for millennia with their vivid green color and rich history. Here are 20 fascinating facts about natural emeralds, complete with scientific details and historical insights.",
-    blogImage: fACILITATINGIMAGE,
-    mainBlog: `#### The Fascinating World of Gemstones: Understanding Their Differences
-
-    ![Visual Guide to Gemstone Types and Their Unique Properties](https://images.app.goo.gl/iFMRZoPN7ZcixAg38)
+   {
+      slug: "fascinating-world-of-gemstones",
+      blogTitle: "The Fascinating World of Gemstones: Understanding Their Differences",
+      blogDescription: "Emeralds have enchanted humans for millennia with their vivid green color and rich history. Here are 20 fascinating facts about natural emeralds, complete with scientific details and historical insights.",
+      blogImage: fACILITATINGIMAGE,
+      mainBlog: `![Visual Guide to Gemstone Types and Their Unique Properties](FascinatingImage.jpg)
 
 ## Introduction
 
@@ -164,16 +162,14 @@ By delving into the world of gemstones, we uncover the incredible diversity and 
 - Smithsonian. (2020). The science of diamonds. Retrieved from [Smithsonian](https://www.smithsonianmag.com/science-of-diamonds)
 - World Bank. (2002). It’s not over until it’s sustainable: Policy and practice in mine closure. *Mining Journal Special Publication*. Retrieved from [World Bank](https://www.worldbank.org/mining-policy-and-practice)
 `,
-  },
-  {
-    slug: "how-to-tell-if-a-gemstone-is-fake-or-real",
-    blogTitle: "How to Tell If a Gemstone Is Fake or Real",
-    blogDescription:
-      "Gemstones have been cherished for their beauty and rarity for millennia. Their allure spans cultures and eras, with each stone holding unique properties that make it distinct. This article delves into the scientific and factual differences between gemstones, covering aspects such as chemical composition, hardness, color variations, formation processes, and uses. By the end, you will have a deeper appreciation for these natural wonders and understand what sets each gemstone apart.",
-    blogImage: RealVsFake,
-    mainBlog: `# How to Tell If a Gemstone Is Fake or Real
-
-    ![Gemstone Authenticity Banner](../assets/BlogImages/RealVsFake.webp)
+   },
+   {
+      slug: "how-to-tell-if-a-gemstone-is-fake-or-real",
+      blogTitle: "How to Tell If a Gemstone Is Fake or Real",
+      blogDescription:
+         "Gemstones have been cherished for their beauty and rarity for millennia. Their allure spans cultures and eras, with each stone holding unique properties that make it distinct. This article delves into the scientific and factual differences between gemstones, covering aspects such as chemical composition, hardness, color variations, formation processes, and uses. By the end, you will have a deeper appreciation for these natural wonders and understand what sets each gemstone apart.",
+      blogImage: RealVsFake,
+      mainBlog: `![Gemstone Authenticity Banner](RealVsFake.webp)
 
 Gemstones have captivated human interest for centuries with their stunning colors and rarity. However, the market is full of synthetic and imitation stones, which can make it challenging for buyers to discern genuine gemstones from fakes. This guide will delve into methods for identifying real gemstones, including visual inspection, physical tests, and advanced techniques. We’ll also explore the types of fake gemstones and how to distinguish them from their authentic counterparts.
 
@@ -282,15 +278,14 @@ By following the methods outlined in this guide, you can confidently assess the 
 - [National Jeweler](https://www.nationaljeweler.com)
 - [Martha Stewart’s Guide to Gemstones](https://www.marthastewart.com/gemstones)
 `
-  },
-  {
-    slug: "the-most-popular-gemstones-in-jewelry",
-    blogTitle: "The Most Popular Gemstones in Jewelry",
-    blogDescription: "Jewelry has been an integral part of human culture and adornment for millennia, with gemstones playing a central role in crafting stunning and meaningful pieces. Each gemstone carries its unique allure, history, and significance, making it an essential element in jewelry design. In this article, we will explore some of the most popular gemstones used in jewelry: diamonds, sapphires, rubies, emeralds, opals, amethysts, topaz, garnets, peridots, and turquoise. We will delve into their history, properties, types, and applications in the jewelry industry.",
-    blogImage: MostpopularGems,
-    mainBlog: `# The Most Popular Gemstones in Jewelry
-
-![Gemstones Banner](../assets/BlogImages/MostpopularGems.jpeg)
+   },
+   {
+      slug: "the-most-popular-gemstones-in-jewelry",
+      blogTitle: "The Most Popular Gemstones in Jewelry",
+      blogDescription: "Jewelry has been an integral part of human culture and adornment for millennia, with gemstones playing a central role in crafting stunning and meaningful pieces. Each gemstone carries its unique allure, history, and significance, making it an essential element in jewelry design. In this article, we will explore some of the most popular gemstones used in jewelry: diamonds, sapphires, rubies, emeralds, opals, amethysts, topaz, garnets, peridots, and turquoise. We will delve into their history, properties, types, and applications in the jewelry industry.",
+      blogImage: MostpopularGems,
+      mainBlog: `
+![GemstonesBanner](MostpopularGems.jpeg)
 
 Jewelry has been an integral part of human culture and adornment for millennia, with gemstones playing a central role in crafting stunning and meaningful pieces. Each gemstone carries its unique allure, history, and significance, making it an essential element in jewelry design. In this article, we will explore some of the most popular gemstones used in jewelry: diamonds, sapphires, rubies, emeralds, opals, amethysts, topaz, garnets, peridots, and turquoise. We will delve into their history, properties, types, and applications in the jewelry industry.
 
@@ -299,7 +294,7 @@ Jewelry has been an integral part of human culture and adornment for millennia, 
 
 Diamonds have been treasured for centuries and are often associated with wealth, power, and eternal love. The name "diamond" comes from the Greek word "adamas," meaning "unconquerable" or "invincible" due to their remarkable hardness. Diamonds have been used in jewelry since ancient times, with evidence of their use dating back to the 4th century BC in India ([Gemological Institute of America, 2024](https://www.gia.edu)).
 
-![Diamonds](../assets/BlogImages/DiamondImage.jpg)
+![Diamonds](DiamondImage.jpg)
 
 ### Properties
 
@@ -323,7 +318,7 @@ Diamonds are widely used in various types of jewelry, including engagement rings
 
 Sapphires have been valued since antiquity and were highly prized in ancient Persia, where they were believed to protect the wearer from envy and harm. The term "sapphire" comes from the Greek word "sappheiros," which refers to the blue gemstone ([American Gem Trade Association, 2024](https://www.agta.org)).
 
-![Sapphires](../assets/BlogImages/Saphier.webp)
+![Sapphires](Saphier.webp)
 
 ### Properties
 
@@ -346,7 +341,7 @@ Sapphires are commonly used in engagement rings, earrings, and pendants. Their d
 
 Rubies have been celebrated throughout history for their vibrant red color and association with passion and power. The name "ruby" comes from the Latin word "ruber," meaning "red." Rubies have been used in jewelry and as talismans since ancient times, and they were highly valued in both Indian and Burmese cultures ([American Gem Trade Association, 2024](https://www.agta.org)).
 
-![Rubies](../assets/BlogImages/Rubies.webp)
+![Rubies](Rubies.webp)
 
 ### Properties
 
@@ -368,7 +363,7 @@ Rubies are frequently used in engagement rings, statement necklaces, and high-en
 
 Emeralds have been cherished since ancient times, with references found in the writings of Pliny the Elder and ancient Egyptian texts. The name "emerald" comes from the Greek word "smaragdos," meaning "green gem." They were highly prized by the Egyptians and later by various European and Asian cultures ([Gemological Institute of America, 2024](https://www.gia.edu)).
 
-![Emeralds](../assets/BlogImages/emeraldImage.webp)
+![Emeralds](emeraldImage.webp)
 
 ### Properties
 
@@ -412,7 +407,7 @@ Opals are used in various jewelry pieces, including rings, necklaces, and earrin
 
 Amethysts have been used in jewelry since ancient times and were highly prized by the Greeks and Romans. The name "amethyst" comes from the Greek word "amethystos," meaning "not drunk," as it was believed to prevent intoxication. Amethysts have a long history of use in religious and royal jewelry ([Gemological Institute of America, 2024](https://www.gia.edu)).
 
-![Amethysts](URL-to-image)
+![Amethysts](amethysts.jpg)
 
 ### Properties
 
@@ -434,7 +429,7 @@ Amethysts are popular in various types of jewelry, including rings, earrings, an
 
 Topaz has been used in jewelry since ancient times and was prized by the Greeks and Romans. The name "topaz" is believed to have originated from the Sanskrit word "tapas," meaning "fire," due to its brilliance. Topaz was often used in royal jewelry and has a rich history of use across various cultures ([Gemological Institute of America, 2024](https://www.gia.edu)).
 
-![Topaz](URL-to-image)
+![Topaz](Topaz.jpg)
 
 ### Properties
 
@@ -456,7 +451,7 @@ Topaz is used in various types of jewelry, including rings, earrings, and neckla
 
 Garnets have been used in jewelry for thousands of years, with references found in ancient Egyptian and Roman artifacts. The name "garnet" comes from the Latin word "granatum," meaning "seed," due to their resemblance to pomegranate seeds. Garnets were highly valued in various ancient cultures for their deep, rich colors ([Gemological Institute of America, 2024](https://www.gia.edu)).
 
-![Garnets](URL-to-image)
+![Garnets](garnet.webp)
 
 ### Properties
 
@@ -478,7 +473,7 @@ Garnets are used in a variety of jewelry pieces, including rings, necklaces, and
 
 Peridots have been used in jewelry for thousands of years and were highly valued in ancient Egypt. The name "peridot" comes from the Arabic word "faridat," meaning "gem." Peridots were often used in ancient Egyptian jewelry and were believed to bring good fortune ([Gemological Institute of America, 2024](https://www.gia.edu)).
 
-![Peridots](../assets/BlogImages/PERIDOTSimage.jpg)
+![Peridots](PERIDOTSimage.jpg)
 
 ### Properties
 
@@ -527,9 +522,9 @@ Whether you are drawn to the timeless elegance of diamonds, the vibrant hues of 
 - [American Gem Trade Association (AGTA)](https://www.agta.org)
 - [World Jewelry Center](https://www.worldjewelrycenter.com)
 - [International Gem Society (IGS)](https://www.gemsociety.org)
-- [National Jeweler](https://www.nationaljeweler.com)
-`
-  }
+- [National Jeweler](https://www.nationaljeweler.com)`
+   }
 ];
+
 
 export default Blogs
