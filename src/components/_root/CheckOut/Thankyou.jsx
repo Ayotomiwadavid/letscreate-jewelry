@@ -1,125 +1,112 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const Thankyou = () => {
-
-  const OrderedProduct = JSON.parse(localStorage.getItem('cartItems'));
-  const shippingDetails = JSON.parse(localStorage.getItem('shippingDetails'));
-  const [adminMessage, setAdminMessage] = useState({
-    email: '',
-    firstName: '',
-    lastName: '',
-    phone: '',
-    country: '',
-    province: '',
-    streetAddress: '',
-    zipCode: '',
-    town: '',
-    companyName: '',
-    additionalInfo: '',
-    title: '',
-    Price: '',
-    color: '',
-    quantity: '',
-    Tags: '',
-    Category: '',
-  });
-
-
   const [productOrdered, setProductOrdered] = useState([]);
+  const [adminMessage, setAdminMessage] = useState({});
 
-  useEffect(() => {
-    if (OrderedProduct && OrderedProduct.length > 0) {
-      setProductOrdered(OrderedProduct.map(product => ({
-        title: product.title,
-        Price: product.price,
-        color: product.color,
-        quantity: product.quantity,
-        Tags: product.Tags,
-        Category: product.Category
-      })));
-    }
-  }, []);
-
-
-  //========================================
-  //=====SETTING UP MESSAGE DETAILS=========
-  //========================================
+  let shippingDetails = {};
+  
+  try {
+    shippingDetails = JSON.parse(localStorage.getItem('shippingDetails') || '{}');
+  } catch (error) {
+    console.error('Error parsing shippingDetails:', error);
+  }
 
   const { email, firstName, lastName, phone, country, province, streetAddress, zipCode, town, companyName, additionalInfo } = shippingDetails;
 
-  
-  const generateCombinedOrderSummary = (product) => {
-    return product.map(product => {
-      const { title, quantity, color, Category, Price } = product;
-      return `${quantity} ${color} ${title}(s) in the category of ${Category} at $${Price}`;
-    }).join(', and ') + '.';
-  }
-  
-  const newMessage = generateCombinedOrderSummary(productOrdered);
-
-  console.log(newMessage);
-
-
-  //========================================
-  //=====SETTING UP ADMIN MESSAGE===========
-  //========================================
-
   useEffect(() => {
-    setAdminMessage((prevValue) => {
-      return {
-        ...prevValue,
-        email,
-        firstName,
-        lastName,
-        phone,
-        country,
-        province,
-        streetAddress,
-        zipCode,
-        town,
-        companyName,
-        additionalInfo,
-        message: newMessage,
+    try {
+      const orderedProduct = JSON.parse(localStorage.getItem('cartItems') || '[]');
+      if (orderedProduct.length > 0) {
+        setProductOrdered(
+          orderedProduct.map(product => ({
+            title: product.title,
+            Price: product.price,
+            color: product.color,
+            quantity: product.quantity,
+            Tags: product.Tags,
+            Category: product.Category,
+          }))
+        );
       }
-    })
+    } catch (error) {
+      console.error('Error parsing cartItems:', error);
+    }
   }, []);
 
+  useEffect(() => {
+    const generateCombinedOrderSummary = product => {
+      return (
+        product
+          .map(product => {
+            const { title, quantity, color, Category, Price } = product;
+            return `${quantity} ${color} ${title}(s) in the category of ${Category} at $${Price}`;
+          })
+          .join(', and ') + '.'
+      );
+    };
 
-  emailjs.init('1VFd4PpZgAFZUZuju');
+    const newMessage = generateCombinedOrderSummary(productOrdered);
+
+    setAdminMessage({
+      email,
+      firstName,
+      lastName,
+      phone,
+      country,
+      province,
+      streetAddress,
+      zipCode,
+      town,
+      companyName,
+      additionalInfo,
+      summary: newMessage,
+    });
+  }, [productOrdered, email, firstName, lastName, phone, country, province, streetAddress, zipCode, town, companyName, additionalInfo]);
+
+  useEffect(() => {
+    emailjs.init('1VFd4PpZgAFZUZuju');
+  }, []);
 
   const sendAdminMail = () => {
+    console.log('Sending admin mail with message:', adminMessage);
     emailjs.send('service_91h0v7i', 'template_uqe3q9p', adminMessage).then(
-      (response) => {
+      response => {
+        toast.success("Thanks, we'll respond very soon");
       },
-      (error) => {
-        console.error('FAILED... An error occured!');
-      },
+      error => {
+        toast.error('FAILED... An error occurred!');
+        console.error('EmailJS error:', error);
+      }
     );
-  }
+  };
 
   const sendUserMail = () => {
+    console.log('Sending user mail with message:', adminMessage);
     emailjs.send('service_91h0v7i', 'template_hcc4y26', adminMessage).then(
-      (response) => {
-        localStorage.removeItem('shippingDetails')
-        localStorage.removeItem('cartItems')
+      response => {
+        toast.success("Thanks, we'll respond very soon");
       },
-      (error) => {
-        console.error('FAILED... An error occured!');
-      },
+      error => {
+        toast.error('FAILED... An error occurred!');
+        console.error('EmailJS error:', error);
+      }
     );
-  }
+  };
 
   const sendBothMails = () => {
     sendUserMail();
     sendAdminMail();
-  }
+  };
 
   useEffect(() => {
-    sendBothMails();
-  }, []);
-
+    if (adminMessage.summary) {
+      sendBothMails();
+    }
+  }, [adminMessage]);
 
   return (
     <section className='h-lvh w-full bg-[#fff] flex items-center justify-center'>
@@ -127,15 +114,15 @@ const Thankyou = () => {
         <span className='py-1 w-[200px] bg-[#2DCE71] rounded-full'></span>
         <aside className='py-10 px-[50px] gap- flex flex-col items-center justify-center'>
           <h1 className='font-extrabold text-5xl text-[#C9C9C9] uppercase'>Thank you</h1>
-
           <p className='text-2xl font-sans capitalize text-[#C9C9C9] mt-10'>your order</p>
           <p className='text-2xl font-sans capitalize text-[#C9C9C9]'>is being processed</p>
         </aside>
-
-        <Link to='/' className='bg-[#2DCE71] text-white capitalize font-bold h-[50px] px-4 text-center flex items-center justify-center rounded-md'>Continue shopping</Link>
+        <Link to='/' className='bg-[#2DCE71] text-white capitalize font-bold h-[50px] px-4 text-center flex items-center justify-center rounded-md'>
+          Continue shopping
+        </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Thankyou
+export default Thankyou;
