@@ -79,6 +79,11 @@ const Blogdetails = () => {
               h5: ({ children }) => <h5 className="font-bold text-lg my-2">{children}</h5>,
               h6: ({ children }) => <h6 className="font-bold text-base my-1">{children}</h6>,
               strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+              a: ({ href, children }) => (
+                <a href={href} className="text-blue-500 underline hover:text-blue-700">
+                  {children}
+                </a>
+              ), 
             }}
           >
             {blogPost.mainBlog}
