@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser';
 
 export default function Grid({ createUserAccount, isLoading, shippingDetails, isEdited }) {
   const [total, setTotal] = useState(0);
-  const [orderedProducts, setOrderedProducts] = useState([]);
 
   useEffect(() => {
     const savedTotal = localStorage.getItem("total");
@@ -13,15 +12,7 @@ export default function Grid({ createUserAccount, isLoading, shippingDetails, is
     }
   }, []);
 
-  useEffect(() => {
-    if (orderedProducts.length > 0) {
-      console.log("Ordered Products:", orderedProducts);
-      sendEmail();
-    }
-  }, [orderedProducts]);
-
   const endPointUrl = 'https://techthoth-stripe-server.onrender.com/';
-
   const secretKey = 'sk_test_2IIZj9qvETFVO3EvJYJHAUQ100SCzRfnk5';
 
   const requestBodyObject = {
@@ -30,8 +21,8 @@ export default function Grid({ createUserAccount, isLoading, shippingDetails, is
     productName: 'Lets create products Check out',
     mode: 'payment',
     paymentMethod: 'card',
-    successUrl: 'https://lets-create-jewelry.vercel.app//checkout',
-    cancelUrl: 'https://lets-create-jewelry.vercel.app/thank-you',
+    successUrl: 'https://lets-create-jewelry.vercel.app/thank-you',
+    cancelUrl: 'https://lets-create-jewelry.vercel.app/payment-error',
     quantity: 1,
     currency: 'usd'
   };
@@ -44,53 +35,6 @@ export default function Grid({ createUserAccount, isLoading, shippingDetails, is
     body: JSON.stringify(requestBodyObject)
   };
 
-  const createProductObject = (products) => {
-    return products.map(product => ({
-      title: product.title,
-      category: product.Category,
-      quantity: product.quantity,
-      color: product.color,
-      price: product.price,
-      tags: product.tags
-    }));
-  };
-
-  const sendEmail = () => {
-    let message = {
-      shippingDetails,
-      orderedProducts
-    };
-
-    emailjs
-      .send(
-        'service_0m74n6m',
-        'template_0o464dn',
-        message,
-        'QjkTowdPcBd3Gc9il'
-      )
-      .then(
-        (response) => {
-          if (response.ok) {
-            toast.success('Email sent successfully!');
-          }
-        },
-        (error) => {
-          toast.error('Failed to send email. Please try again.', error);
-        }
-      );
-  };
-
-  const sendOutCheckoutMails = () => {
-    const orderRecord = localStorage.getItem('cartItems');
-    if (orderRecord) {
-      const orderProducts = JSON.parse(orderRecord);
-      const productObjects = createProductObject(orderProducts);
-      setOrderedProducts(productObjects);
-    } else {
-      toast.error('No items in the cart');
-    }
-  };
-
   const handlePayment = () => {
     let valid = true;
     for (let key in shippingDetails) {
@@ -99,6 +43,9 @@ export default function Grid({ createUserAccount, isLoading, shippingDetails, is
         break;
       }
     }
+
+  // Save shipping details to local storage
+  localStorage.setItem('shippingDetails', JSON.stringify(shippingDetails));
 
     if (valid) {
       fetch(endPointUrl, options)
@@ -110,9 +57,6 @@ export default function Grid({ createUserAccount, isLoading, shippingDetails, is
         })
         .then(({ url }) => {
           window.location.href = url;
-        })
-        .then(() => {
-          sendOutCheckoutMails();
         })
         .catch(err => {
           console.error('An Error Occurred:', err.message);

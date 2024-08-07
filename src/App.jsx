@@ -15,6 +15,7 @@ import ProtectedRoute from "./Context/ProtectedRoute";
 import Thankyou from "./components/_root/CheckOut/Thankyou";
 import BlogPage from "./components/_root/Blog/Index";
 import Blogdetails from "./components/_root/Blog/Blogdetails";
+import PaymentError from "./components/_root/CheckOut/Error";
 
 function App() {
   // const appContext = useContext(AuthStatus);
@@ -53,6 +54,7 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/blogs" element={<BlogPage />} />
+        <Route path="/payment-error" element={<PaymentError />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
         <Route path="/blogdetails/:blogslug"  element={<Blogdetails />}/>
       </Routes>

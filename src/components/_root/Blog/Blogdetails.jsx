@@ -20,6 +20,7 @@ import Topaz from '../../../assets/BlogImages/Topaz.jpg';
 import Rubies from '../../../assets/BlogImages/Rubies.webp';
 import amethysts from '../../../assets/BlogImages/amethysts.jpg';
 import garnet from '../../../assets/BlogImages/garnet.webp';
+import { Helmet } from "react-helmet";
 
 const imageMap = {
   'DiamondImage.jpg': DiamondImage,
@@ -56,6 +57,10 @@ const Blogdetails = () => {
 
   return (
     <section>
+      <Helmet>
+        <title>{blogPost.blogTitle}</title>
+        <meta name="description" content={blogPost.blogDescription} />
+      </Helmet>
       <Navbar />
       <main className="py-[50px] px-[5vw] flex w-full items-center justify-center">
         <div>
@@ -83,7 +88,7 @@ const Blogdetails = () => {
                 <a href={href} className="text-blue-500 underline hover:text-blue-700">
                   {children}
                 </a>
-              ), 
+              ),
             }}
           >
             {blogPost.mainBlog}
