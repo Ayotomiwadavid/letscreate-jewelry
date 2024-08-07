@@ -1,6 +1,5 @@
 import React from "react";
 import Addr from "../../../assets/images/addr.png";
-import Map from "../../../assets/images/map.png";
 
 export default function Address() {
   return (
@@ -74,7 +73,6 @@ export default function Address() {
           <img className="w-full md:w-[400px] h-[300px] rounded-md" src={Addr} alt="Office" />
         </div>
       </div>
-      <img className="w-full h-[350px] my-14 rounded-md" src={Map} alt="Office" />
     </>
   );
 }
