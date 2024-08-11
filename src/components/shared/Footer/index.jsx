@@ -5,7 +5,7 @@ import Social from "./newsletter";
 function Footer() {
   return (
     <>
-    {/* <Social /> */}
+      {/* <Social /> */}
       <div className="bg-gray-100">
         <div className="flex flex-col md:flex-row px-3 md:px-12 py-4 border-b border-primary items-start justify-between">
           <div>
@@ -30,7 +30,7 @@ function Footer() {
                   Do You Need Help ?<br />
                 </span>
                 <span className="text-black text-2xl font-normal font-['Lato']">
-                  +00 0123456789
+                  +1 (587) 227-2013
                 </span>
               </div>
 
@@ -70,7 +70,7 @@ function Footer() {
                 </span>
                 <span className="text-black text-[15px] font-bold font-['Cormorant']">
                   E-mail:{" "}
-                  <span className="font-normal">contact@example.com</span>
+                  <span className="font-normal">letscreate.marketing@gmail.com</span>
                 </span>
               </div>
 
