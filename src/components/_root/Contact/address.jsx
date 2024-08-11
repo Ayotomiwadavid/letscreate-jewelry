@@ -29,7 +29,7 @@ export default function Address() {
                   Address
                 </span>
                 <span className="text-black/opacity-70 text-[13px] font-normal font-['Lato']">
-                  Head Office: 102 Princes Street, Toronto, Venice, Ca 124
+                  Head Office: 3 Hampshire Close NW, Calgary, Alberta, T2A, 3X9
                 </span>
               </div>
             </div>
@@ -45,9 +45,9 @@ export default function Address() {
                   Contact
                 </span>
                 <span className="text-black/opacity-70 text-[13px] font-normal font-['Lato']">
-                  Mobile: +(084) 1200-567-990 <br /> Hotline: 1800 – 1102
+                  Mobile: +1 (587) 227-2013
                   <br />
-                  E-mail: contact@example.com
+                  E-mail: letscreate.marketing@gmail.com
                 </span>
               </div>
             </div>
