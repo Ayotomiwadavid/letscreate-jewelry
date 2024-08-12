@@ -65,7 +65,7 @@ function Footer() {
                 <span className="text-black text-[15px] font-bold font-['Cormorant']">
                   Head Office:{" "}
                   <span className="font-normal">
-                  Head Office: 3 Hampshire Close NW, Calgary, Alberta, T2A, 3X9
+                  3 Hampshire Close NW, Calgary, Alberta, T2A, 3X9
                   </span>
                 </span>
                 <span className="text-black text-[15px] font-bold font-['Cormorant']">
