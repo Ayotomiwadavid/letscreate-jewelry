@@ -5,6 +5,8 @@ import emailjs from '@emailjs/browser';
 export default function Grid({ createUserAccount, isLoading, shippingDetails, isEdited }) {
   const [total, setTotal] = useState(0);
 
+  console.log(import.meta.env.VITE_STRIPE_SECRET_KEY)
+
   useEffect(() => {
     const savedTotal = localStorage.getItem("total");
     if (savedTotal) {
@@ -13,7 +15,7 @@ export default function Grid({ createUserAccount, isLoading, shippingDetails, is
   }, []);
 
   const endPointUrl = 'https://techthoth-stripe-server.onrender.com/create-checkout-session';
-  const secretKey = 'sk_live_Vpx0lKI9neTYgyYEV2O7o02000z8Tmxn0g';
+  const secretKey = import.meta.env.VITE_STRIPE_SECRET_KEY;
 
   const requestBodyObject = {
     stripeSecretKey: secretKey,
