@@ -5,8 +5,6 @@ import emailjs from '@emailjs/browser';
 export default function Grid({ createUserAccount, isLoading, shippingDetails, isEdited }) {
   const [total, setTotal] = useState(0);
 
-  console.log(import.meta.env.VITE_MINE)
-
   useEffect(() => {
     const savedTotal = localStorage.getItem("total");
     if (savedTotal) {
