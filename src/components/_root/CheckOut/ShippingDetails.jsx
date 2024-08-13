@@ -20,8 +20,8 @@ export default function Grid({ createUserAccount, isLoading, shippingDetails, is
     productName: 'Lets create products Check out',
     mode: 'payment',
     paymentMethod: 'card',
-    successUrl: 'http://localhost:5173/thank-you',
-    cancelUrl: 'http://localhost:5173/payment-error',
+    successUrl: 'https://www.letscreatejewelry.com/thank-you',
+    cancelUrl: 'https://www.letscreatejewelry.com/payment-error',
     quantity: 1,
     currency: 'usd'
   };

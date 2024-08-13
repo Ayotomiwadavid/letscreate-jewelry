@@ -14,7 +14,6 @@ export default function FormField() {
     zipCode: "",
     phone: "",
     email: "",
-    additionalInfo: "",
   });
   const [isLoading, setLoading] = useState(false);
   const [isEdited, setIsEdited] = useState(false);
@@ -149,18 +148,6 @@ export default function FormField() {
             value={formData.email}
             onChange={handleInputChange}
             className="bg-gray-30 text-sm rounded-md block w-full p-3.5 border border-gray-300"
-            required
-          />
-        </div>
-
-        <div className="mb-6">
-          <input
-            type="type"
-            name="additionalInfo"
-            value={formData.additionalInfo}
-            onChange={handleInputChange}
-            className="bg-gray-30 text-sm rounded-md block w-full p-3.5 border border-gray-300"
-            placeholder="Additional Information"
             required
           />
         </div>
