@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import emailjs from '@emailjs/browser';
 
 export default function Grid({ createUserAccount, isLoading, shippingDetails, isEdited }) {
   const [total, setTotal] = useState(0);
