@@ -91,7 +91,7 @@ const statusOptions = {
     'Content-Type': 'application/json'
   },
   body: JSON.stringify({
-    stripeSecretKey: import.meta.env.VITE_STRIPE_SECRET_KEY,
+    stripeSecretKey: import.meta.env.VITE_MINE,
     sessionId: Id
   })
 }
