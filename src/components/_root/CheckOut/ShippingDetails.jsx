@@ -13,7 +13,7 @@ export default function Grid({ createUserAccount, isLoading, shippingDetails, is
   }, []);
 
   const endPointUrl = 'https://techthoth-stripe-server.onrender.com/create-checkout-session';
-  const secretKey = 'sk_test_2IIZj9qvETFVO3EvJYJHAUQ100SCzRfnk5';
+  const secretKey = 'sk_live_Vpx0lKI9neTYgyYEV2O7o02000z8Tmxn0g';
 
   const requestBodyObject = {
     stripeSecretKey: secretKey,

@@ -91,7 +91,7 @@ const statusOptions = {
     'Content-Type': 'application/json'
   },
   body: JSON.stringify({
-    stripeSecretKey: 'sk_test_2IIZj9qvETFVO3EvJYJHAUQ100SCzRfnk5',
+    stripeSecretKey: 'sk_live_Vpx0lKI9neTYgyYEV2O7o02000z8Tmxn0g',
     sessionId: Id
   })
 }
