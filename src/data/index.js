@@ -33,7 +33,7 @@ export const products = [
       crossOfLightPendantWithManSilver,
       CrossOfLightWithHumanGold,
     ],
-    price: "190",
+    price: "24",
     title: "Cross of Light Pendant",
     description: `Introducing our Cross of Light Pendant, a timeless symbol of faith and hope. Crafted with precision and care, this pendant features a sleek and elegant cross design adorned with shimmering accents that catch the light from every angle.
 
