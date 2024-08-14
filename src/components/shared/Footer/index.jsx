@@ -42,18 +42,12 @@ function Footer() {
               </div>
 
               <div className="ml-auto flex px-4 pt-3 pb-2 text-[20px] items-center justify-center gap-4 rounded-md">
-                <Link to={"/"} className="">
+                <a href="https://www.facebook.com/profile.php?id=61564128695078" target="_blank" className="">
                   <ion-icon name="logo-facebook"></ion-icon>
-                </Link>
-                <Link to={"/"} className="">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </Link>
-                <Link to={"/"}>
+                </a>
+                <a href="https://www.instagram.com/letscreatejewelers/" target="_blank" className="">
                   <ion-icon name="logo-instagram"></ion-icon>
-                </Link>
-                <Link to={"/"}>
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </Link>
+                </a>
               </div>
             </div>
 
